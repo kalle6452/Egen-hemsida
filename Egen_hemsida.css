@@ -1,81 +1,87 @@
 /*Här ändrar jag bakgrundsfärgen på sidan*/
-body {
-  background-color: chartreuse;
+ body {
+     background-color: chartreuse;
 }
-/*Här har jag skapat en css grid som hjälper mig att sätta objekt på de
-ställen där jag vill ha de.*/
-/*Efter .grid-container { så börjar sakerna inuti den, detta gäller
-för alla selektorer som har {.*/
-.grid-container {
-/*Det här berättar att det är en grid vi har gjort.*/
-  display: grid;
-/*Det här förklarar hur många kolumner som finns på hemsidan.*/
-  grid-template-columns: auto auto auto auto auto auto;
-/*Det här är hur många pixlar det är mellan raderna och pixlarna.*/
-  grid-gap: 10px;
-  background-color: DarkOrange;
-/*Det här är hur stor skillnad det är mellan texten och ramen.*/
-  padding: 10px;
-}
-/*Det här är information om texten i sig som är inuti grid-containern.*/
-.grid-container > div {
-/*Det här förklarar att texten är centrerad.*/
-  text-align: center;
-  padding: 20px 0;
-/*Det här är hur stor texten i sig är.*/
-  font-size: 30px;
-}
-/*Det här är var länkarna är för någonstans i dokumentet.*/
-.item1 {
-  grid-column: 8 / 8;
-}
-.item2 {
-  grid-area: 1 / 1 / 1 / 1;
-}
-/*Här har jag börjat att anpassa tabellen som kommer att vara på hemsidan.*/
-table {
-/*Border-collapse gör så att det blir gränser på tabellen.*/
-  border-collapse: collapse;
-/*Width anpassar om hur mycket plats på bredden något ska ta.*/
-  width: 100%;
-}
-/*td, th är vad som kommer att stå inuti tabellen.*/
-td, th {
-/*Det här är vilken färg gränsen ska vara på tabellen.*/
-  border: 1px solid black;
-/*Text-align ändrar på var texten ska börja.*/
-  text-align left;
-/*Padding är distansen från texten till gränsen.*/
-  padding: 5px;
-}
-/*nth-child selektorn gör så att de som står inom parantesen blir uppfyllt.
-I det här fallet så blir det vit färg på varje udda rad eftersom att det står
-"odd" inom parantesen.*/
-tr:nth-child(odd) {
-  background-color: white;
-  color: skyblue;
-}
-tr:nth-child(even) {
-  background-color: black;
-  color: lime;
-}
-/*a:link gör så att länken blir röd när den inte är aktiverad eller besökt.*/
-a:link {
-  color: red;
-/*Text-decoration gör så att länken ser ut som vanlig text, annars
-brukar det ofta vara ett streck under länken för att markera att det
-är en länk.*/
-  text-decoration: none;
-}
-/*Gör så att länken ändrar färg när den har blivit besökt.*/
-a:visited {
-  color: indigo;
-}
-/*Gör så att länken ändrar färg när muspekaren är på den.*/
-a:hover {
-  color: skyblue;
-}
-/*Gör så att länken ändrar färg när man klickar på den.*/
-a:active {
-  color: slategray;
-}
+/*Här har jag skapat en css grid som hjälper mig att sätta objekt på de ställen där jag vill ha de.*/
+/*Efter .grid-container {
+     så börjar sakerna inuti den, detta gäller för alla selektorer som har {
+        .*/
+         .grid-container {
+            /*Det här berättar att det är en grid vi har gjort.*/
+             display: grid;
+            /*Det här förklarar hur många kolumner som finns på hemsidan.*/
+             grid-template-columns: auto auto auto auto auto auto;
+            /*Det här är hur många pixlar det är mellan raderna och pixlarna.*/
+             grid-gap: 10px;
+             background-color: DarkOrange;
+            /*Det här är hur stor skillnad det är mellan texten och ramen.*/
+             padding: 10px;
+        }
+        /*Det här är information om texten i sig som är inuti grid-containern.*/
+         .grid-container>div {
+            /*Det här förklarar att texten är centrerad.*/
+             text-align: center;
+             padding: 20px 0;
+            /*Det här är hur stor texten i sig är.*/
+             font-size: 30px;
+        }
+        /*Det här är var länkarna är för någonstans i dokumentet.*/
+         .item1 {
+             grid-column: 8 / 8;
+        }
+         .item2 {
+             grid-area: 1 / 1 / 1 / 1;
+        }
+        /*Här har jag börjat att anpassa tabellen som kommer att vara på hemsidan.*/
+         table {
+            /*Border-collapse gör så att det blir gränser på tabellen.*/
+             border-collapse: collapse;
+            /*Width anpassar om hur mycket plats på bredden något ska ta.*/
+             width: 100%;
+        }
+        /*td, th är vad som kommer att stå inuti tabellen.*/
+         td, th {
+            /*Det här är vilken färg gränsen ska vara på tabellen.*/
+             border: 1px solid black;
+            /*Text-align ändrar på var texten ska börja.*/
+             text-align left;
+            /*Padding är distansen från texten till gränsen.*/
+             padding: 5px;
+        }
+        /*nth-child selektorn gör så att de som står inom parantesen blir uppfyllt. I det här fallet så blir det vit färg på varje udda rad eftersom att det står "odd" inom parantesen.*/
+         tr:nth-child(odd) {
+             background-color: white;
+             color: skyblue;
+        }
+         tr:nth-child(even) {
+             background-color: black;
+             color: lime;
+        }
+        /*a:link gör så att länken blir röd när den inte är aktiverad eller besökt.*/
+         a:link {
+             color: red;
+            /*Text-decoration gör så att länken ser ut som vanlig text, annars brukar det ofta vara ett streck under länken för att markera att det är en länk.*/
+             text-decoration: none;
+        }
+        /*Gör så att länken ändrar färg när den har blivit besökt.*/
+         a:visited {
+             color: indigo;
+        }
+        /*Gör så att länken ändrar färg när muspekaren är på den.*/
+         a:hover {
+             color: skyblue;
+        }
+        /*Gör så att länken ändrar färg när man klickar på den.*/
+         a:active {
+             color: slategray;
+        }
+         header, p {
+             color: indigo;
+        }
+         .rubrik {
+             color: indigo;
+        }
+         main {
+             font-size: 110%;
+        }
+         
