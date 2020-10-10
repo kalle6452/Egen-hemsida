@@ -1,10 +1,15 @@
 /*Här ändrar jag bakgrundsfärgen på sidan*/
+/*Body gör att backgrundsfärgen gäller på alla hemsidor.*/
  body {
      background-color: chartreuse;
 }
 /*Här har jag skapat en css grid som hjälper mig att sätta objekt på de ställen där jag vill ha de.*/
 /*Efter .grid-container {
      så börjar sakerna inuti den, detta gäller för alla selektorer som har {
+        . Allt utanför {
+        }
+         påverkas inte vad som står inuti {
+        }
         .*/
          .grid-container {
             /*Det här berättar att det är en grid vi har gjort.*/
@@ -18,14 +23,15 @@
              padding: 10px;
         }
         /*Det här är information om texten i sig som är inuti grid-containern.*/
-         .grid-container>div {
+         .grid-container > div {
             /*Det här förklarar att texten är centrerad.*/
              text-align: center;
+            /*Padding är hur stort mellanrum det är mellan ramen och texten.*/
              padding: 20px 0;
             /*Det här är hur stor texten i sig är.*/
              font-size: 30px;
         }
-        /*Det här är var länkarna är för någonstans i dokumentet.*/
+        /*Det här är var länkarna, item1 och item2 finns för någonstans i dokumentet.*/
          .item1 {
              grid-column: 8 / 8;
         }
@@ -45,7 +51,6 @@
              border: 1px solid black;
             /*Text-align ändrar på var texten ska börja.*/
              text-align left;
-            /*Padding är distansen från texten till gränsen.*/
              padding: 5px;
         }
         /*nth-child selektorn gör så att de som står inom parantesen blir uppfyllt. I det här fallet så blir det vit färg på varje udda rad eftersom att det står "odd" inom parantesen.*/
@@ -75,13 +80,19 @@
          a:active {
              color: slategray;
         }
-         header, p {
+        /*header och p får färgen indigo*/
+         header, p{
              color: indigo;
         }
-         .rubrik {
+        /*Allt som har class="rubrik" får de saker som står inuti klammerparanteserna.*/
+         .rubrik{
              color: indigo;
         }
-         main {
+        /*Allt som är inom maintaggen får större text.*/
+         main{
              font-size: 110%;
+        }
+         footer {
+             color: skyblue;
         }
          
